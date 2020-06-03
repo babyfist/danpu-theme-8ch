@@ -1,4 +1,4 @@
-Danpu theme, overwriting custom style sheet for 8chan boards. Used in [/danpu/](https://8ch.net/danpu/)
+American Broadcasting CommUnity theme, overwriting custom style sheet for 8kun boards. Used in [/abcu/](https://8kun.top/abcu/)
 
 ## Screenshot
 ![Screenshot](https://vgy.me/WF4fek.png)
