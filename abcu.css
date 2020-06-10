@@ -1,0 +1,340 @@
+/* Author: babyfist 
+ * https://github.com/babyfist
+ * Written for 8kun board /abcu/, supports vichan
+ * ALL THE CODE HAS !important tag because you have to overwrite the original css code
+ */
+
+/*------------------------------------------------------
+ * COLOR PALLET
+ 
+	Backgrounds 
+	rgba(208, 217, 219, 255)
+	white 	
+	
+	#FF2D2D = Bright Red	[header, small text . boardlist]
+	#1E2D3B = Dark Blue		[green text, blotter text, post boarder, spacer catalog]
+	#af0a0f = Dark Red		[pink text, subject, required-star]
+	#d0d9db = Greyish Blue lighter [post background]
+	#97acc2 = Greyish Blue darker [UNUSED]
+	
+	Accent Colors
+	#DAF0EE = Light Torquise [Page text background, boardlist background]
+	#4e4463 = Purplish		[Background for Reply Div, Name Field Color ouput]
+	#e3ffde = Lime Green 	[boardlist hover color, YOU (Shadow)]
+	
+	Links
+	#000dff = HyperLink Blue	[clicked link]
+	#fc7c9c = Bright Pink		[YOU Hover]
+	#00d263 = Bright Green		[YOU Color, Hover hyperlink]
+	
+ *------------------------------------------------------*/
+
+
+/*------------------------------------------------------
+ * Don't hide Post count
+ *------------------------------------------------------*/
+.posts_by_id{
+  display:initial!important;
+  font-weight:bold;
+}
+
+/*------------------------------------------------------
+ * Fake yous are obvious
+ *------------------------------------------------------*/
+.body small {
+   font-weight:bold;
+   font-size: 14px;
+   color: #00d263;
+   text-shadow: #e3ffde 0 0 16px;
+}
+.body small:hover {
+   color:#fc7c9c;
+}
+
+/*------------------------------------------------------
+ * Background and Overlay Image
+ *------------------------------------------------------*/
+// Backgrounds {}
+/* Delete or change first image if you don't want an Logo in right bottom*/
+body {
+    background: url('https://media.8kun.top/file_store/869f5096b7d0762943345082bcbd04815a88af8e14925de9aac8a916c34da31c.png') no-repeat no-repeat fixed bottom right, linear-gradient(to bottom, white, rgba(195,225,255,255) 49%) no-repeat !important;
+    background-size: 25%, auto !important;
+	font-family: Roboto!important;
+}
+div.ban {background:#DAF0EE}
+/*------------------------------------------------------------
+* Hide Top Banner
+*-------------------------------------------------------------
+// Hiding unneccessary elements  {}
+.centered.announcement.board-owners-or-users-feel-free-to-hide,
+div.hr hr,
+#new-bottom-ads,{
+  display: none;
+}
+
+.thumbnail,
+.fileinfo,
+.unimportant.hint{
+ display: none!important;
+}
+ 
+/* Removing some text, and ads in footer -----------------------
+
+.announcement{
+       display: none!important;
+    }
+
+    footer {
+       display: none!important;
+}
+
+
+div a img {display:none;}
+.thread-image, .full-image {display:block;}
+
+----------------------------------------------------------------*/
+
+/*------------------------------------------------------
+ *  TEXT APPEARENCE CHANGES
+ - GreenText = quote
+ - PinkText = rquote
+ - ??????  = quote_checked
+ - RedText = span.heading
+ - PurpleText = span.small
+ - 
+ *------------------------------------------------------*/
+  .quote{
+  color:#1E2D3B!important;
+  font-family:Roboto-Condensed!important;
+  font-style:italic!important;
+  font-weight:bold!important;
+  font-size: 14px!important;
+  }
+  .quote_checked{color:#14880!important;}
+  .rquote{
+  color:#af0a0f;
+  font-family:Roboto-Condensed!important;
+  font-style:italic!important;
+  font-weight:bold!important;
+  font-size: 14px!important;
+  }
+  span.heading{
+  color:#1E2D3B;
+  font-size: 17px;
+  font-weight:bold!important;
+  }
+  span.small{
+  color:#FF2D2D;
+  font-weight:bold!important;
+  }
+/*------------------------------------------------------
+ * Announcement Banner section and custom links
+ *------------------------------------------------------*/
+div.blotter, .intro span.name{
+  color: #1E2D3B!important;
+  font-weight: bold!important;
+  font-family: Roboto-Condensed!important;
+}
+
+/*------------------------------------------------------
+ * Post Settings
+ *------------------------------------------------------*/
+// Post settings {}
+#post-form-inner{
+  border-style: double!important;
+  display: inline-block;
+  border-width: 2px !important;
+  border-style: double !important;
+  border-color: #1E2D3B!important;
+}
+ul {
+  background-color: #DAF0EE!important;
+}
+
+div.post.reply div.body {
+  display: inline !important;
+  padding: unset !important;
+  width: 0px !important;
+}
+div.post.reply {
+  background: #d0d9db !important;
+  border-width: 1px !important;
+  border-style: double !important;
+  border-color: #1E2D3B !important;
+}
+div.post.reply.highlighted {
+  background-color: white !important;
+}
+/*------------------------------------------------------
+ * CAPCODES and TRIPCODES patriot fade in/out red blue (Stolen from QR)
+ *------------------------------------------------------*/
+time:before,span.trip::before{font-size:18px;
+content:" ";
+color:#bbf}
+time::after,span.trip::after{font-size:18px;
+content:" ";
+color:#bbf}
+span.trip,span.capcode{padding:1px 3px 1px 3px;
+background-color:#000;
+border-radius:8px;
+border:1px solid #bbe;
+color:#ffd700;
+background:linear-gradient(300deg,red,red,red,#bbb,#44f);
+background-size:800% 800%;
+-webkit-animation:Patriot 5s ease infinite;
+-moz-animation:Patriot 5s ease infinite;
+-o-animation:Patriot 5s ease infinite;
+animation:Patriot 5s ease infinite;
+-webkit-text-fill-color:transparent;
+background:-o-linear-gradient(transparent,transparent);
+-webkit-background-clip:text}@-webkit-keyframes Patriot {
+    0%{background-position:0% 19%}
+    50%{background-position:100% 82%}
+    100%{background-position:0% 19%}
+}@-moz-keyframes Patriot {
+    0%{background-position:0% 19%}
+    50%{background-position:100% 82%}
+    100%{background-position:0% 19%}
+}@-o-keyframes Patriot {
+    0%{background-position:0% 19%}
+    50%{background-position:100% 82%}
+    100%{background-position:0% 19%}
+}@keyframes Patriot {
+    0%{background-position:0% 19%}
+    50%{background-position:100% 82%}
+    100%{background-position:0% 19%}
+}
+/*------------------------------------------------------
+ * Element Settings 
+	hr = divider
+ *------------------------------------------------------*/
+.pages{
+  background-color:  #DAF0EE!important;
+  border-width: 1px !important;
+  border-style: double !important;
+  border-color: #1E2D3B !important;
+}
+hr {
+  height: 3px;
+  background: #1E2D3B no-repeat scroll center;
+  margin-bottom: 15px;
+}
+p.intro{
+  padding: 0px!important;
+  margin: 0px !important;
+}
+
+/*------------------------------------------------------
+ * Thread Section Settings
+ - input
+ - input
+ - form table tr th 
+ *------------------------------------------------------*/
+input{
+	display:flex!important;
+}
+input[name=password]{
+  min-width: 90%!important;;
+}
+form table tr th {
+    background: #4e4463 !important;
+}
+#options-row {
+  background-color: whitesmoke!important;
+}
+header div.subtitle {
+	color: #af0a0f!important;
+	font-size: 16px!important;
+	text-align: center;
+	/*text-shadow: 3px 3px 1px #ffffff !important;    /*right, alt, blur, color */	
+}
+header h1	{
+  color: #FF2D2D!important;
+  font-size: 24px!important;
+  text-align: center;
+  /*text-shadow: 3px 3px 1px #ffffff !important;    /*right, alt, blur, color */
+}
+.name{
+  font-family: Roboto-Condensed!important;
+  font-size: 16px!important;
+  color: #4e4463 !important;
+  text-shadow: 1px 1px #fffff;
+}
+.own_post{
+  margin-right: 3px !important;
+  font-weight: bold!important;
+  font-family: Roboto!important;
+  font-size: 16px!important;
+  color: #FF2D2D !important;
+  text-shadow: 1px 1px #fffff;
+}
+.subject{
+  margin-right: 3px !important; 
+  font-size: 16px!important;
+  color: #af0a0f !important;
+  font-weight:bold!important;
+  font-family: Roboto-Condensed!important;
+  text-shadow: 1px 1px #fffff;
+}
+tr th{
+  font-family: Roboto-Condensed!important;
+  font-size: 15px !important;
+  color: #DAF0EE !important;
+  text-align: center;
+  text-shadow: 1px 0px 0px #fffff !important;    /*right, alt, blur, color */ 
+}
+.required-star{
+  font-family: arial!important;
+  margin-left: -7px;
+  color:#af0a0f !important;
+}
+
+/*------------------------------------------------------
+ * TOP BAR BOTTOM BAR Settings
+ - boardlist = .boardlist 
+	- bottom = .boardlist.bottom
+ - Pages section in index view = .pages
+ *------------------------------------------------------*/
+.desktop-style div.boardlist:not(.bottom) {
+  font-family: Roboto-Condensed!important;
+  box-shadow: 0 1px 2px rgb(0, 255, 120);
+  border-bottom: 0px solid !important;
+  background-color: #DAF0EE !important;
+  box-shadow: 0 0px 0px !important;
+}
+.boardlist{
+  font-family: Roboto-Condensed!important;
+  color: #FF2D2D !important;
+  opacity: 0.3;
+}
+.boardlist:hover{
+  color: #e3ffde !important;
+  opacity: 1;
+}
+
+.pages{
+  padding-left: 3% !important;
+  padding-right: 25% !important;
+  text-align: left;
+  border-style: initial !important;
+  font-family: Roboto-Condensed!important;
+}
+/*------------------------------------------------------
+ * HYPERLINK Settings
+ - Base color = a 
+ - visited color = a,a:visited
+ - hover color = a:hover
+ *------------------------------------------------------*/
+ a,a:visited {
+  text-decoration: underline;
+  color: #000dff;
+}
+
+a:hover,.intro a.post_no:hover {
+  color: #00d263;
+}
+
+a{
+  color:#af0a0f;
+  font-family: Roboto!important;
+}
